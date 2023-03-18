@@ -1,12 +1,10 @@
 #include<stdio.h>
 
 /**
- *main:Begin
- *
- *Description: all the sizes of variables
- *
- *Return:0
- */
+ * main-Begin
+ * Description: "print the size"
+ * Return: Always 0
+*/
 
 int main(void)
 {
