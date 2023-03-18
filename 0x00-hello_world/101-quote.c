@@ -10,9 +10,8 @@
  */
 int main(void)
 {
-	if (write(STDERR_FILENO, MESSAGE, sizeof(MESSAGE) - 1) != sizeof(MESSAGE) - 1)
-	{
-		return 1;
-	}
-	return 0;
+	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	write(1, quo, 59);
+	return (1);
 }
