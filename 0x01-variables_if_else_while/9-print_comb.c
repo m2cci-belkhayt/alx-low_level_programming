@@ -14,9 +14,13 @@ int main(void)
 	
 	for (i = 0; i < 10; i++)
 	{
-		printf("%d, ", i);
+		if (i!=9)
+		{
+			putchar("%d, ", i);
+		}
+		else
+			putchar("9\n");
 	}
-	putchar('\n');
 
 	return (0);
 }
