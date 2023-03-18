@@ -1,11 +1,11 @@
 #include<stdio.h>
 
 /**
- *main
+ *main-Begin
  *
- *Description: "puts tu print"
+ *Description: "C Program print with puts"
  *
- *return 0.
+ *Return: Always 0.
 */
 
 int main(void)
