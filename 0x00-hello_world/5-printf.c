@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-/** 
- *main function
+/**
+ *main-Begin
  *
- *Description: A short description of what the code does.
+ *Description: "C Program print with printf"
  *
- *Return 0
- */
+ *Return: Always 0.
+*/
 
 int main(void)
 {
