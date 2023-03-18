@@ -2,11 +2,14 @@
 #include <time.h>
 #include<stdio.h>
 /* more headers goes there */
+
 /**
- * main: this is th main function
+ * main - Entry point
  *
- * Return: 0
- */
+ * Description: print value of n satus; zero, positive or negative
+ *
+ * Return: Always 0 (Success)
+*/
 
 /* betty style doc for function main goes there */
 int main(void)
