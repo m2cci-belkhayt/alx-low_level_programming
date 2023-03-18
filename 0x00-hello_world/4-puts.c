@@ -2,7 +2,10 @@
 
 /** 
  * main function
+ *
  * Description: A short description of what the code does.
+ *
+ * return 0
  */
 
 int main(void)
