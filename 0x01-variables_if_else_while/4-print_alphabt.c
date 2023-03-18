@@ -19,8 +19,7 @@ int main(void)
 			++ch;
 		}
 		else 
-		{	++ch;
-		}
+			++ch;
 	}
 	putchar('\n');
 
