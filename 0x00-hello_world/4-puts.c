@@ -1,15 +1,15 @@
-#include <stdio.h>
+#include<stdio.h>
 
-/** 
- * main function
+/**
+ *main
  *
- * Description: A short description of what the code does.
+ *Description: "puts tu print"
  *
- * return 0
- */
+ *return 0.
+*/
 
 int main(void)
-{	
+{
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
