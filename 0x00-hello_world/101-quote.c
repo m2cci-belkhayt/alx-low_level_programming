@@ -1,13 +1,13 @@
 #include <unistd.h>
-#define MESSAGE "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
 
 /**
- * main: Begin as a main
+ * main - Entry point
  *
- * Description: this description gives something
+ * Description:" print a quote using write function"
  *
- * Return: this function return 1 if the program is written and 0 id not 
- */
+ * Return: return an error 1.
+*/
+
 int main(void)
 {
 	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
