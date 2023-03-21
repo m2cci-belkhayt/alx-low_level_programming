@@ -1,21 +1,20 @@
 #include "main.h"
 
 /**
- * main - starting point
- *
- * Return: 0
+ * main - Entry point
+ * Return:0
  */
 
 int main(void)
 {
-	char c[] = "_putchar";
+	char c[] = "abcdefghijklmnopqrstuvwxyz";
 	int i = 0;
-
-	while (i < 8)
+	while ( i < strlen(c) )
 	{
 		_putchar(c[i]);
 		i++;
-		}
+	}
 	_putchar('\n');
 	return (0);
 }
+
