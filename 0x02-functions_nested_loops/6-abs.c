@@ -6,18 +6,15 @@
  * Return: numberabs
  */
 
-int int _abs(int)
+int _abs(int n)
 {
 	int test;
 
-	if (n > 0)
+	if (n >= 0)
 	{
 		test = n;
 	}
-	else if (n == 0)
-	{
-		test = 0;
-	}
+
 	else
 	{
 		test = -n;
