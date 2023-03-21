@@ -1,20 +1,20 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet - Entry point
  * Return:0
  */
 
-int main(void)
+void print_alphabet(void)
 {
-	char c[] = "abcdefghijklmnopqrstuvwxyz";
-	int i = 0;
-	while ( i < strlen(c) )
+	char c = 'a';
+
+	while (c <= 'z')
 	{
-		_putchar(c[i]);
-		i++;
+		_putchar(c);
+		c++;
+
 	}
 	_putchar('\n');
-	return (0);
-}
 
+}
