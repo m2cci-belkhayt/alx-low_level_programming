@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
-*print_numbers - print 0123456789
-* owned by Bwave ICT
+*print_most_numbers - print 0123456789
+* its me taha
 *Return: void
 */
 
