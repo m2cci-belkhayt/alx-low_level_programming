@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * more_numbers - nmbr fct
- * Bwave ICT file
- * Return: no return
+ * print_line - nmbr fct
+ * 
+ * Return: void
  */
 
-void more_numbers(int n)
+void print_line(int n)
 {
 
 	int i = 0;
