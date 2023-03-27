@@ -1,8 +1,7 @@
 #include "main.h"
 /**
- * _puts it returns a string
- * 
- * @str is a string
+ * _puts - it returns a string
+ * @str: is a string
  * Return a string
  */
 
