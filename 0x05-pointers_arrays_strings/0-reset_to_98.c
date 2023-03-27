@@ -4,7 +4,6 @@
  * reset_to_98 - point to something
  *
  * @n: int to check
- * 
  * Return: Always nothing.
  */
 
