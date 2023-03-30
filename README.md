@@ -1,1 +1,1 @@
-more loops and functions
+pointers arrays string
