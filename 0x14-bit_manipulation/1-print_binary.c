@@ -8,7 +8,7 @@
  */
 void print_binary(unsigned long int n)
 {
-    unsigned long int mask = 1UL << ((sizeof(n) * 8) - 1); // Create a mask for the leftmost bit
+    unsigned long int mask = 1UL << ((sizeof(n) * 8) - 1);
 
     if (n == 0)
     {
@@ -23,7 +23,7 @@ void print_binary(unsigned long int n)
         else
             _putchar('0');
 
-        mask >>= 1; // Shift the mask one position to the right
+        mask >>= 1;
     }
 }
 
