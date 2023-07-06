@@ -2,37 +2,36 @@
 
 /**
  * binary_to_uint - converts a binary number to an
- * 
- * @b: binary constance character.
+ * unsigned int.
+ * @b: binary.
  *
  * Return: unsigned int.
  */
 unsigned int binary_to_uint(const char *b)
 {
-    unsigned int result = 0;
-    int len = 0;
-    int base = 1;
-    int i;
+	unsigned int ui;
+	int len, base_two;
 
-    while (b[len] != '\0')
-    {
-        len++;
-    }
+	if (!b)
+		return (0);
 
-    for (i = len - 1; i >= 0; i--)
-    {
-        if (b[i] != '0' && b[i] != '1')
-        {
-            return 0;
-        }
+	ui = 0;
 
-        if (b[i] == '1')
-        {
-            result += base;
-        }
+	for (len = 0; b[len] != '\0'; len++)
+		;
 
-        base *= 2;
-    }
+	for (len--, base_two = 1; len >= 0; len--, base_two *= 2)
+	{
+		if (b[len] != '0' && b[len] != '1')
+		{
+			return (0);
+		}
 
-    return result;
+		if (b[len] & 1)
+		{
+			ui += base_two;
+		}
+	}
+
+	return (ui);
 }
