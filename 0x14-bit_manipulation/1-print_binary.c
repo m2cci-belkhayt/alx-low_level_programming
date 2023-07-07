@@ -8,6 +8,7 @@
  */
 void print_binary(unsigned long int n)
 {
+    int significant_digit = 0;
     unsigned long int mask = 1UL << ((sizeof(n) * 8) - 1);
 
     if (n == 0)
@@ -19,11 +20,15 @@ void print_binary(unsigned long int n)
     while (mask != 0)
     {
         if ((n & mask) != 0)
+        {
             _putchar('1');
-        else
+            significant_digit = 1;
+        }
+        else if (significant_digit)
+        {
             _putchar('0');
+        }
 
         mask >>= 1;
     }
 }
-
