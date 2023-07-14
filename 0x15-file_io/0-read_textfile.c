@@ -1,31 +1,47 @@
 #include "main.h"
 
 /**
- * read_textfile - reads text from a file and prints it
- * @filename: name of file to read
- * @letters: number of bytes to read
- *
- * Return: number bytes read/printed
+ * read_textfile - reads a text file and prints it to the standard output
+ * @filename: filename
+ * @letters: actual number of letters it could read and print
+ * Return: 0 if file cannot be opened or filename is NULL or write fails
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fp;
-	ssize_t bytes;
-	char *buf;
+	int file, red, print;
+	char *buffer;
 
-	if (!filename || !letters)
+	/* check invalid filename */
+	if (filename == NULL)
 		return (0);
-	fp = open(filename, O_RDONLY);
-	if (fp == -1)
+
+	/* open file and check success */
+	file = open(filename, O_RDONLY);
+	if (file == -1)
 		return (0);
+
+	/* allocate space for file being read and check success */
 	buffer = malloc(sizeof(char) * (letters + 1));
 	if (buffer == NULL)
-		return 0;
-	bytes = read(fd, buffer, letters);
-	bytes = write(STDOUT_FILENO, buffer, bytes);
-	
+		return (0);
+
+	/* read file and check success */
+	red = read(file, buffer, letters);
+	if (red == -1)
+		return (0);
+	/* add null byte after string */
+	buffer[red] = '\0';
+
+	/* print file and check success */
+	print = write(STDOUT_FILENO, buffer, red);
+	if (print == -1 || print != red)
+		return (0);
+
+	/* close file and check success */
+	file = close(file);
+	if (file == -1)
+		return (0);
+
 	free(buffer);
-	close(fd);
-	
-	return (bytes);
+	return (print);
 }
