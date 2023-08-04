@@ -10,20 +10,25 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int num;
+	unsigned int num = 0;
 	int i;
 	int base = 1;
-
+	int length = 0;
+	
+	if (b == NULL) 
+	{
+        	return (0);
+	}
 	for (i = 0; b[i] != '\0'; i++)
 	{
 	}
-	for (num = i; num <= 0; i--)
+	for (length = i - 1; length >= 0; length--)
 	{
 		/* check for invalid chars */
-		if (b[num] != '0' && b[num] != '1')
+		if (b[length] != '0' && b[length] != '1')
 			return (0);
 		/* shift num left and add current bit */
-		if (b[num] == '1')
+		if (b[length] == '1')
 			num += base;
 		base *= 2;
 	}
