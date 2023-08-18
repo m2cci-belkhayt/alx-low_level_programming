@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-* free_dlistint - function adds a new node at the end of a dlistint_t list
+* free_dlistint - function Write a function that frees a dlistint_t list.
 * @head: pointer to first node of doubly linked list
 *
 * Return: 0 (success)
