@@ -1,3 +1,7 @@
 #!/bin/bash
-gcc -fPIC -c *.c /*  It ensures that the code can be loaded and executed at any memory address.*/
-gcc -shared -o liball.so *.o /* linking together the compiled object files */
+
+# Compile each .c file into object files with position-independent code
+gcc -fPIC -c *.c
+
+# Create a shared library named liball.so by linking compiled object files
+gcc -shared -o liball.so *.o
