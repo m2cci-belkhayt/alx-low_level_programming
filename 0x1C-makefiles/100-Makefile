@@ -1,0 +1,35 @@
+# Makefile for 'school' executable
+
+CC := gcc
+SRC := $(wildcard *.c)
+OBJ := $(SRC:.c=.o)
+NAME := school
+RM := rm -f
+CFLAGS := -Wall -Werror -Wextra -pedantic
+DEPS := m.h
+
+.PHONY: all clean oclean fclean re
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $^
+
+clean:
+	$(RM) *~ $(OBJ)
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
+
+# Rule to force recompilation if m.h is missing
+$(OBJ): $(DEPS)
+
+# Rule to avoid using the string $(CC) more than once
+%.o: %.c
+	$(CC) $(CFLAGS) -c -o $@ $<
+
