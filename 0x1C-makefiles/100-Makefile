@@ -1,7 +1,7 @@
 # Makefile for 'school' executable
 
 CC := gcc
-SRC := $(wildcard *.c)
+SRC := main.c school.c
 OBJ := $(SRC:.c=.o)
 NAME := school
 RM := rm -f
@@ -30,6 +30,5 @@ re: fclean all
 $(OBJ): $(DEPS)
 
 # Rule to avoid using the string $(CC) more than once
-%.o: %.c
+$(OBJ): %.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
-
